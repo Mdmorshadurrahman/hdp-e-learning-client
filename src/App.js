@@ -18,20 +18,20 @@ function App() {
         {
           path: '/software',
           loader: async () => {
-            return fetch('http://localhost:5000/courses')
+            return fetch('https://hdp-e-learning-server.vercel.app/courses')
           },
           element: <Software />
         },
         {
           path: '/hardware',
           loader: async () => {
-            return fetch('http://localhost:5000/courses')
+            return fetch('https://hdp-e-learning-server.vercel.app/courses')
           },
           element: <Hardware />
         },
         {
           path: '/carts/:id',
-          loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`),
+          loader: ({ params }) => fetch(`https://hdp-e-learning-server.vercel.app/courses/${params.id}`),
           element: <Cart />
         },
         { path: '/about', element: <About /> }

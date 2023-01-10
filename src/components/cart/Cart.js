@@ -7,12 +7,6 @@ const Cart = () => {
     const [count, setCount] = useState(1)
 
     console.log(emptyObject);
-    // useEffect(() => {
-    //     if (orderCmplt) {
-    //         const btn = document.getElementById('orderBtn');
-    //         btn.innerHTML = '';
-    //     }
-    // }, []);
     const orderBtn = () => {
         alert('order succefully completed');
         setCount(0);
