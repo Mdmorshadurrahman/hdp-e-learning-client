@@ -15,7 +15,7 @@ const Cart = () => {
     return (
         <div className='min-h-screen'>
             <div className='w-4/6 mx-auto'>
-                <img src="https://img.freepik.com/free-photo/box-market-electronic-ordering-shop-basket_1421-567.jpg?w=1060&t=st=1673289191~exp=1673289791~hmac=0edf4770f38ed89d2c1596fbff2eb353146e080c9355025a350b5e146efa2256" alt="" />
+                <img src="https://i.ibb.co/HtNcP9n/box-market-electronic-ordering-shop-basket.jpg" alt="" />
             </div>
             <div className='w-4/6 mx-auto pl-60'>
                 <div className="text-sm breadcrumbs">
