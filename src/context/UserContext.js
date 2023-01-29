@@ -10,7 +10,7 @@ const auth = getAuth(app);
 
 const UserContext = ({children}) => {
     const [user,setUser] = useState({firstName:'Md Morshadur',lastName:'Rahman'});
-
+    const [loading,setLoading] = useState(true)
     const googleProvider = new GoogleAuthProvider();
 
     const register = (email,password,displayName) => {
@@ -32,6 +32,7 @@ const UserContext = ({children}) => {
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
+            setLoading(false)
             console.log('Current User: ',currentUser);
         })
 
@@ -40,7 +41,7 @@ const UserContext = ({children}) => {
         }
     },[])
 
-    const authInfo = {user, register,login,logout,loginWithGoogle}
+    const authInfo = {user, register,login,logout,loginWithGoogle,loading}
 
     return (
         <AuthContext.Provider value={authInfo}>

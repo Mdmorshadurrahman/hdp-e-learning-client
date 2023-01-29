@@ -1,11 +1,12 @@
 import React from 'react';
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/UserContext';
 import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
     const {register,loginWithGoogle} = useContext(AuthContext)
+    const navigate = useNavigate();
     const handleSubmit = event =>{
         event.preventDefault();
         const form = event.target;
@@ -20,6 +21,7 @@ const Register = () => {
                 const user = result.user;
                 console.log('registered user',user);
                 alert('Congratulation '+result.user.email+'\nyou have successfully registered!');
+                navigate('/login')
             })
             .catch(error => {
                 console.error(error);
@@ -31,6 +33,7 @@ const Register = () => {
             const user = result.user;
             console.log('with google', user);
             alert('Congratulation '+result.user.email+'\nyou have successfully registered!');
+            navigate('/')
         })
         .catch(error =>{
             console.error(error);
@@ -42,7 +45,7 @@ const Register = () => {
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold text-center">Sign Up!</h1>
-                        <p className="py-6 text-center">Sign yourself to enroll and do more</p>
+                        <p className="py-6 text-center">Sign yourself up & be a member</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm rounded-none shadow-2xl bg-yellow-400">
                         <form onSubmit={handleSubmit} className="card-body">

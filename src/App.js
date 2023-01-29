@@ -10,6 +10,7 @@ import app from './firebase/Firebase.init';
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import Login from './components/login/Login';
 import Register from './components/register/Register';
+import Privateroute from './privateroute/Privateroute';
 const auth = getAuth(app);
 
 function App() {
@@ -26,14 +27,14 @@ function App() {
           loader: async () => {
             return fetch('https://hdp-e-learning-server.vercel.app/courses')
           },
-          element: <Software />
+          element: <Privateroute><Software /></Privateroute>
         },
         {
           path: '/hardware',
           loader: async () => {
             return fetch('https://hdp-e-learning-server.vercel.app/courses')
           },
-          element: <Hardware />
+          element: <Privateroute><Hardware /></Privateroute>
         },
         {
           path: '/carts/:id',

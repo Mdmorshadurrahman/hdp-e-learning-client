@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, NavLink, useLoaderData } from 'react-router-dom';
 
 const Software = () => {
     const [count, setCount] = useState(0);
@@ -22,9 +22,9 @@ const Software = () => {
             <div className='w-4/6 mx-auto pl-60'>
                 <div className="text-sm breadcrumbs">
                     <ul>
-                        <li><a>Home</a></li>
-                        <li><a>Courses</a></li>
-                        <li><a>Software</a></li>
+                    <li><NavLink to={'/home'}>Home</NavLink></li>
+                    <li><NavLink to={'/'}>Courses</NavLink></li>
+                    <li><NavLink to={'software'}>Software</NavLink></li>
                     </ul>
                 </div>
             </div>

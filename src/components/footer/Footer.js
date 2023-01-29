@@ -31,7 +31,7 @@ const Footer = () => {
                 <footer className="footer w-4/6 mx-auto pl-60 py-4 border-t text-base-content border-base-300">
                     <div className="items-center grid-flow-col">
                         <img src="https://i.ibb.co/4YyYdVr/logo-hdp.png" alt="" />
-                        <p>HDP Gesellschaft für ganzheitliche Datenverarbeitung mbH <br />Karl-Heinz-Kipp-Straße 24 · 55232 Alzey · Telefon 06731 990-0 · Kontakt@HDPGmbH.de</p>
+                        <p>HDP e-Learning Site<br />Schenkendorf Straße 3 · 52066 Aachen · Telefon 01778708899 · mdmorshadur.rahman@udo.edu</p>
                     </div>
                     <div className="md:place-self-center md:justify-self-end">
                         <div className="grid grid-flow-col gap-4">

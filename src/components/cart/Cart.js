@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Navigate, useLoaderData } from 'react-router-dom';
+import { NavLink, Navigate, useLoaderData } from 'react-router-dom';
 
 const Cart = () => {
     let choosenData = useLoaderData();
@@ -20,8 +20,8 @@ const Cart = () => {
             <div className='w-4/6 mx-auto pl-60'>
                 <div className="text-sm breadcrumbs">
                     <ul>
-                        <li><a>Home</a></li>
-                        <li><a>Carts</a></li>
+                        <li><NavLink to={'/home'}>Home</NavLink></li>
+                        <li><NavLink to={'/carts/:id'}>Carts</NavLink></li>
                     </ul>
                 </div>
             </div>

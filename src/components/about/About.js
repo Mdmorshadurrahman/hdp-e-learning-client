@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -9,8 +10,8 @@ const About = () => {
             <div className='w-4/6 mx-auto pl-60'>
                 <div className="text-sm breadcrumbs">
                     <ul>
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
+                    <li><NavLink to={'/home'}>Home</NavLink></li>
+                    <li><NavLink to={'/about'}>About</NavLink></li>
                     </ul>
                 </div>
             </div>
